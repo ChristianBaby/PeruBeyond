@@ -1,0 +1,44 @@
+---
+const pays = ['visa','mastercard','paypal','amex','western-union','wetravel'];
+---
+<footer class="bg-navy text-white pt-16 pb-6">
+  <div class="container-pb grid md:grid-cols-4 gap-10">
+    <div>
+      <img src="https://www.perubeyond.com/wp-content/uploads/2025/12/logo_pb.png" alt="Peru Beyond" class="mb-4 max-w-[160px]" />
+      <p class="text-sm opacity-80">Agencia de viajes especializada en tours por Perú. Experiencias auténticas e inolvidables.</p>
+      <div class="flex gap-3 mt-4">
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy"><i class="bi bi-tiktok"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-gold hover:text-navy"><i class="bi bi-tripadvisor"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4 class="text-white font-bold mb-4">Enlaces Rápidos</h4>
+      <ul class="space-y-2 text-sm opacity-80">
+        <li><a href="#about" class="hover:text-gold">Sobre Nosotros</a></li>
+        <li><a href="#machupicchu" class="hover:text-gold">Machu Picchu</a></li>
+        <li><a href="#tours-cusco" class="hover:text-gold">Tours Cusco</a></li>
+        <li><a href="#tours-peru" class="hover:text-gold">Tours Perú</a></li>
+        <li><a href="#" class="hover:text-gold">Libro de Reclamaciones</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-bold mb-4">Contacto</h4>
+      <ul class="space-y-2 text-sm opacity-80">
+        <li><i class="bi bi-telephone-fill text-gold mr-2"></i>+51 943 491 959</li>
+        <li><i class="bi bi-envelope-fill text-gold mr-2"></i>info@perubeyond.com</li>
+        <li><i class="bi bi-geo-alt-fill text-gold mr-2"></i>Calle Zetas 109, Cusco</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-bold mb-4">Métodos de Pago</h4>
+      <div class="flex flex-wrap gap-2">
+        {pays.map(p => <span class="bg-white rounded px-2 py-1 text-xs text-navy font-semibold capitalize">{p.replace('-',' ')}</span>)}
+      </div>
+    </div>
+  </div>
+  <div class="container-pb mt-12 pt-6 border-t border-white/10 text-center text-sm opacity-70">
+    ©Copyright 2025 PerúBeyond
+  </div>
+</footer>

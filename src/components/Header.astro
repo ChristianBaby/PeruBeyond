@@ -1,0 +1,36 @@
+---
+const menu = [
+  { label: 'TOURS PERÚ', href: '#tours-peru' },
+  { label: 'MACHUPICCHU', href: '#machupicchu' },
+  { label: 'TOUR CUSCO', href: '#tours-cusco' },
+  { label: 'ACTIVIDADES', href: '#actividades' },
+  { label: 'PERÚ BEYOND', href: '#about' },
+];
+---
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="container-pb flex items-center justify-between py-3">
+    <a href="/" class="flex items-center">
+      <img src="https://www.perubeyond.com/wp-content/uploads/2025/07/logo-perubeyond-1.png" alt="Peru Beyond" width="154" />
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      {menu.map(m => (
+        <a href={m.href} class="text-navy font-semibold text-sm hover:text-gold transition">{m.label}</a>
+      ))}
+    </nav>
+    <a href="tel:+51943491959" class="hidden md:flex items-center gap-2 text-navy font-bold">
+      <span class="bg-gold w-10 h-10 rounded-full flex items-center justify-center"><i class="bi bi-telephone-fill text-navy"></i></span>
+      <span>+51 943 491 959</span>
+    </a>
+    <button class="lg:hidden text-2xl text-navy" id="mobile-menu-btn"><i class="bi bi-list"></i></button>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+    <div class="container-pb py-4 flex flex-col gap-3">
+      {menu.map(m => <a href={m.href} class="text-navy font-semibold py-2 border-b">{m.label}</a>)}
+    </div>
+  </div>
+</header>
+<script is:inline>
+  document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+    document.getElementById('mobile-menu')?.classList.toggle('hidden');
+  });
+</script>

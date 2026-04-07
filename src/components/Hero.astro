@@ -1,0 +1,41 @@
+---
+---
+<section class="relative min-h-[700px] flex items-center" style="background-image:linear-gradient(rgba(32,47,89,.45),rgba(32,47,89,.55)),url('https://www.perubeyond.com/wp-content/uploads/2026/02/machu-picchu-full1.webp');background-size:cover;background-position:center;">
+  <div class="container-pb text-white py-24">
+    <span class="script-title block mb-3">Explora, vive y disfruta</span>
+    <h1 class="text-white text-4xl md:text-6xl font-bold leading-tight max-w-3xl">Peru Beyond <br/><span class="text-gold">Más de lo que Imaginas</span></h1>
+    <div class="flex items-center gap-3 mt-6">
+      <i class="bi bi-tripadvisor text-3xl text-gold"></i>
+      <div>
+        <div class="flex text-gold">{Array.from({length:5}).map(()=> <i class="bi bi-star-fill"></i>)}</div>
+        <span class="text-sm">5.0 · TripAdvisor</span>
+      </div>
+    </div>
+
+    <form class="mt-10 bg-white rounded-2xl p-4 md:p-6 grid grid-cols-1 md:grid-cols-5 gap-4 text-navy shadow-2xl">
+      <div>
+        <label class="text-xs font-bold uppercase">Destino</label>
+        <select class="w-full mt-1 border-b border-gray-300 py-2 outline-none">
+          <option>Cusco</option><option>Lima</option><option>Arequipa</option><option>Ica</option>
+        </select>
+      </div>
+      <div>
+        <label class="text-xs font-bold uppercase">Tipo de Tour</label>
+        <select class="w-full mt-1 border-b border-gray-300 py-2 outline-none">
+          <option>Aventura</option><option>Cultural</option><option>Familiar</option>
+        </select>
+      </div>
+      <div>
+        <label class="text-xs font-bold uppercase">Cuándo</label>
+        <input type="date" class="w-full mt-1 border-b border-gray-300 py-2 outline-none" />
+      </div>
+      <div>
+        <label class="text-xs font-bold uppercase">Duración</label>
+        <select class="w-full mt-1 border-b border-gray-300 py-2 outline-none">
+          <option>1 día</option><option>2-4 días</option><option>5+ días</option>
+        </select>
+      </div>
+      <button type="submit" class="btn-gold !rounded-xl">BUSCAR <i class="bi bi-search ml-1"></i></button>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+---
+export interface Props { image: string; title: string; duration: string; price: string; href?: string; }
+const { image, title, duration, price, href = '#' } = Astro.props;
+---
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:-translate-y-1 transition">
+  <div class="relative overflow-hidden">
+    <img src={image} alt={title} class="w-full h-60 object-cover group-hover:scale-105 transition duration-500" />
+    <span class="absolute top-4 left-4 bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full">{duration}</span>
+  </div>
+  <div class="p-6">
+    <h3 class="text-lg font-bold mb-3 line-clamp-2">{title}</h3>
+    <div class="flex items-center justify-between border-t pt-4">
+      <div>
+        <span class="text-xs text-gray-500">Desde</span>
+        <div class="text-2xl font-bold text-gold">${price}<span class="text-sm text-gray-500">/pp</span></div>
+      </div>
+      <a href={href} class="btn-gold !py-2 !px-4 text-sm">Ver Tour</a>
+    </div>
+  </div>
+</div>

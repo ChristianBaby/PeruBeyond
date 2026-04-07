@@ -1,0 +1,19 @@
+---
+import TourCard from './TourCard.astro';
+const tours = [
+  { image: 'https://www.perubeyond.com/wp-content/uploads/2025/07/lima-paracas-ica.webp', title: 'Lima + Paracas + Ica 9D/8N', duration: '9 Días / 8 Noches', price: '690' },
+  { image: 'https://www.perubeyond.com/wp-content/uploads/2025/07/lima-paracas.webp', title: 'Lima + Paracas 8D/7N', duration: '8 Días / 7 Noches', price: '653' },
+  { image: 'https://www.perubeyond.com/wp-content/uploads/2025/07/lima-paracas-huacachina.webp', title: 'Lima + Paracas + Huacachina 7D/6N', duration: '7 Días / 6 Noches', price: '589' },
+];
+---
+<section id="tours-peru" class="section">
+  <div class="container-pb">
+    <div class="text-center mb-12">
+      <span class="script-title">Perú Completo</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2">Tours en Perú</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      {tours.map(t => <TourCard {...t} />)}
+    </div>
+  </div>
+</section>

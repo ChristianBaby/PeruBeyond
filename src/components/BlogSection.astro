@@ -1,0 +1,29 @@
+---
+const posts = [
+  { image: 'https://www.perubeyond.com/wp-content/uploads/2025/07/blog-machupicchu.webp', title: 'Machu Picchu: Guía Completa', date: '15 Jul 2025' },
+  { image: 'https://www.perubeyond.com/wp-content/uploads/2025/07/blog-valle-sagrado.webp', title: 'Descubre el Valle Sagrado', date: '10 Jul 2025' },
+  { image: 'https://www.perubeyond.com/wp-content/uploads/2025/07/blog-vinicunca.webp', title: 'Cerro 7 Colores Vinicunca', date: '5 Jul 2025' },
+  { image: 'https://www.perubeyond.com/wp-content/uploads/2025/07/blog-humantay.webp', title: 'Laguna Humantay: Aventura', date: '1 Jul 2025' },
+];
+---
+<section class="section bg-softgreen">
+  <div class="container-pb">
+    <div class="text-center mb-12">
+      <span class="script-title">Blog</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2">Últimas Noticias y Consejos</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {posts.map(p => (
+        <a href="#" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition group">
+          <div class="overflow-hidden">
+            <img src={p.image} alt={p.title} class="w-full h-48 object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="p-5">
+            <span class="text-xs text-gold font-semibold">{p.date}</span>
+            <h3 class="text-base font-bold mt-2 group-hover:text-gold transition">{p.title}</h3>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

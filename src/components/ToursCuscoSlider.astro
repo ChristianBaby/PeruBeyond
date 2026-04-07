@@ -1,0 +1,46 @@
+---
+const tours = [
+  { image: 'https://www.perubeyond.com/wp-content/uploads/2025/07/valle-sur-cusco.webp', title: 'Tour Valle Sur Cusco', duration: 'Full Day', price: '20' },
+  { image: 'https://www.perubeyond.com/wp-content/uploads/2025/07/valle-sagrado-cusco.webp', title: 'Tour Valle Sagrado de los Incas', duration: 'Full Day', price: '39' },
+  { image: 'https://www.perubeyond.com/wp-content/uploads/2025/07/palcoyo-cusco.webp', title: 'Montaña de Colores Palcoyo', duration: 'Full Day', price: '50' },
+  { image: 'https://www.perubeyond.com/wp-content/uploads/2025/07/7-lagunas-cusco.webp', title: '7 Lagunas de Ausangate', duration: 'Full Day', price: '49' },
+];
+---
+<section id="tours-cusco" class="section bg-softgreen">
+  <div class="container-pb">
+    <div class="text-center mb-12">
+      <span class="script-title">Cusco</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2">Tours en Cusco</h2>
+    </div>
+    <div class="swiper tours-cusco-swiper">
+      <div class="swiper-wrapper">
+        {tours.map(t => (
+          <div class="swiper-slide">
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div class="relative">
+                <img src={t.image} alt={t.title} class="w-full h-56 object-cover" />
+                <span class="absolute top-3 left-3 bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full">{t.duration}</span>
+              </div>
+              <div class="p-5">
+                <h3 class="text-base font-bold mb-3 min-h-[3rem]">{t.title}</h3>
+                <div class="flex items-center justify-between border-t pt-3">
+                  <div class="text-xl font-bold text-gold">${t.price}</div>
+                  <a href="#" class="btn-gold !py-2 !px-4 text-xs">Ver Tour</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div class="swiper-pagination !relative !mt-6"></div>
+    </div>
+  </div>
+</section>
+<script is:inline>
+  window.addEventListener('load', () => {
+    if (window.Swiper) new Swiper('.tours-cusco-swiper', {
+      slidesPerView: 1, spaceBetween: 20, pagination: { el: '.tours-cusco-swiper .swiper-pagination', clickable: true },
+      breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 }, 1280: { slidesPerView: 4 } }
+    });
+  });
+</script>

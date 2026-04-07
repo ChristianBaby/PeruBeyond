@@ -1,0 +1,19 @@
+---
+import TourCard from './TourCard.astro';
+const tours = [
+  { image: 'https://www.perubeyond.com/wp-content/uploads/2025/07/cusco-valle-sagrado-machupicchu.webp', title: 'Cusco + Valle Sagrado + Machu Picchu 4D/3N', duration: '4 Días / 3 Noches', price: '462' },
+  { image: 'https://www.perubeyond.com/wp-content/uploads/2025/07/cusco-machupicchu-7-colores.webp', title: 'Cusco + Machu Picchu + Montaña 7 Colores 4D/3N', duration: '4 Días / 3 Noches', price: '447' },
+  { image: 'https://www.perubeyond.com/wp-content/uploads/2025/07/cusco-valle-machupicchu-humantay.webp', title: 'Cusco + Valle + Machu Picchu + Humantay 5D/4N', duration: '5 Días / 4 Noches', price: '486' },
+];
+---
+<section id="machupicchu" class="section">
+  <div class="container-pb">
+    <div class="text-center mb-12">
+      <span class="script-title">Tours Destacados</span>
+      <h2 class="text-3xl md:text-4xl font-bold mt-2">Tours a Machu Picchu</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      {tours.map(t => <TourCard {...t} />)}
+    </div>
+  </div>
+</section>
