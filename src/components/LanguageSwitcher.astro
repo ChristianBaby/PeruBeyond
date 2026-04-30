@@ -86,7 +86,9 @@ const langs = [
       closeDropdown();
       // Change URL
       var currentPath = window.location.pathname;
-      var isTourPage = currentPath.startsWith('/tours/') && currentPath.split('/').length > 2;
+      // Only treat as a tour detail page when path has 3+ real segments: /tours/category/slug
+      var parts = currentPath.split('/').filter(Boolean);
+      var isTourPage = parts.length >= 3 && parts[0] === 'tours';
       if (isTourPage) {
         // For tour pages, change the path
         var newPath = currentPath;
